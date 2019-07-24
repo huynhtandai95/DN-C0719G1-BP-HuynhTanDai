@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Bài tập] Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+    <script>
+       
+        let vatly=prompt("Nhập Điểm môn vật lý") ;
+        let hoahoc=prompt("Nhập Điểm môn hóa học") ;
+        let sinhhoc=prompt("Nhập Điểm môn sinh học");
+        let a=parseInt(vatly);      // Chuyển dữ liệu từ chuỗi sang số
+        let b=parseInt(hoahoc);     // Chuyển dữ liệu từ chuỗi sang số           
+        let c=parseInt(sinhhoc);    // Chuyển dữ liệu từ chuỗi sang số
+        
+        let d = (a+b+c)/3;
+        document.write('Điểm Trung Bình là: ' + d); 
+        document.write('<br/>'); // Xuống dòng
+        document.write('Tổng Điểm là: ' + (a+b+c));
+
+    </script>
+    
+</body>
+</html>
