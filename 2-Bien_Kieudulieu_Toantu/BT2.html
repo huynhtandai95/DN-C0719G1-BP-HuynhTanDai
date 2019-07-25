@@ -1,0 +1,22 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển độ C sang độ F</title>
+</head>
+<body>
+    <p> Nhập Độ C <input id=nhietdo type="number" > </p>
+    <button type="button" onclick="ketqua()">Chuyển</button>
+    <script>
+        function ketqua() {
+            let a = document.getElementById('nhietdo').value;   // Lấy dữ liệu từ input
+            let b = parseInt(a);      //Chuyển chuỗi dữ liệu từ chuỗi sang số nguyên
+            let c = 9*b/5 + 32;
+            document.write(c + " độ F")
+        }
+    </script>
+</body>
+</html>
