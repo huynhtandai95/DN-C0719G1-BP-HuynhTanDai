@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+
+<body>
+    <p>Amount <input id=nhap type="number"></p>
+    <select id="fromCurrency">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+    </select>
+    <select id="toCurrency">
+        <option value="usd">USD</option>
+        <option value="vnd">VND</option>
+    </select>
+    <button onclick="show()">Convert</button>
+    <script>
+        function show() {
+            console.log("abc")
+            let amount = document.getElementById('nhap').value;
+            let fromcurrency = document.getElementById('fromCurrency').value;
+            let tocurrency = document.getElementById('toCurrency').value;
+            if (fromcurrency == 'vnd' && tocurrency == 'vnd') {
+                alert('Lựa chọn trùng cặp tiền tệ ! Hãy chọn lại')
+            }
+            if (fromcurrency == 'usd' && tocurrency == 'usd') {
+                alert('Lựa chọn trùng cặp tiền tệ ! Hãy chọn lại')
+            }
+            if (fromcurrency == "vnd" && tocurrency == 'usd') {
+                let a = amount / 23000;
+                document.write('Số tiền là: ' + a + 'USD')
+            }
+            if (fromcurrency == 'usd' && tocurrency == 'vnd') {
+                let b = amount * 23000;
+                document.write('Số tiền là: ' + b + 'VND')
+            }
+        }
+    </script>
+</body>
+
+</html>
