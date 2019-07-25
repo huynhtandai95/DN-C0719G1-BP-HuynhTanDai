@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input type="number" id="nhap1" >
+    <input type="number" id="nhap2" >
+    <br/>
+    <button onclick="Additon()">Additon(+)</button>
+    <button onclick="Subtraction()">Subtraction(-)</button>
+    <button onclick="Multiplication()">Multiplication(X)</button>
+    <button onclick="Division()">Division(/)</button>
+    
+<script>
+    function Additon() {
+        let a = document.getElementById('nhap1').value;
+        let b= document.getElementById('nhap2').value;
+        let c= parseInt(a);
+        let d= parseInt(b);
+        document.write("Kết quả là: " + (c+d));
+    }
+    function Subtraction() {
+        let a = document.getElementById('nhap1').value;
+        let b= document.getElementById('nhap2').value;
+        let c= parseInt(a);
+        let d= parseInt(b);
+        document.write("Kết quả là: " + (c-d));
+    }
+    function Multiplication() {
+        let a = document.getElementById('nhap1').value;
+        let b= document.getElementById('nhap2').value;
+        let c= parseInt(a);
+        let d= parseInt(b);
+        document.write("Kết quả là: " + (c*d));
+    }
+    function Division() {
+        let a = document.getElementById('nhap1').value;
+        let b= document.getElementById('nhap2').value;
+        let c= parseInt(a);
+        let d= parseInt(b);
+        document.write("Kết quả là: " + (c/d));
+    }
+</script>
+</body>
+</html>
