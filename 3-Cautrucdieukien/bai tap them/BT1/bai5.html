@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xếp hạng học lực của học sinh</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Xếp hạng học lực của học sinh</legend>
+        <p>Điểm bài kiểm tra</p> <input type="number" id='diemKiemTra'>
+        <p>Điểm thi giữa kỳ</p> <input type="number" id='diemGiuaKy'>
+        <p>Điểm thi cuối kỳ</p> <input type="number" id='diemCuoiKy'>
+        <button type="button" onclick="result()">Kết quả</button>
+        <p id='showResult'></p>
+    </fieldset>
+    <script>
+        function result() {
+            let kiemTra = parseFloat(document.getElementById('diemKiemTra').value);
+            let GiuaKy = parseFloat(document.getElementById('diemGiuaKy').value);
+            let CuoiKy = parseFloat(document.getElementById('diemCuoiKy').value);
+            let tongKet = (kiemTra + GiuaKy + CuoiKy * 2) / 4;
+            if (tongKet >= 8.5) {
+                document.getElementById('showResult').innerHTML = 'Điểm học lực là: ' + tongKet + '<br> Xếp loại : Giỏi';
+            }
+            else if (tongKet >= 7) {
+                document.getElementById('showResult').innerHTML = 'Điểm học lực là: ' + tongKet + '<br> Xếp loại : Khá';
+            }
+            else if (tongKet >= 5) {
+                document.getElementById('showResult').innerHTML = 'Điểm học lực là: ' + tongKet + '<br> Xếp loại : Trung bình';
+            }
+            else {
+                document.getElementById('showResult').innerHTML = 'Điểm học lực là: ' + tongKet + '<br> Xếp loại : Yếu';
+            }
+        }
+    </script>
+</body>
+
+</html>

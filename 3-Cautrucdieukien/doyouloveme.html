@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>DO YOU LOVE ME?</p>
+    <button type="button" onclick="yes()">Yes</button>
+    <button type='button' onmouseover="no()" id="btnNo" style="position:absolute; left:50px; top:50px;">No</button>
+
+    <script>
+         function yes() {
+             alert('<3');
+         }
+        function no() {
+            let x = Math.round(Math.random() * window.innerWidth); // Math.random() để sinh ra các số ngẫu nhiên
+            let y = Math.round(Math.random() * window.innerHeight); // window.innerHeight và window.innerWidth để lấy chiều cao và chiều rộng của trình duyệt
+            document.getElementById('btnNo').style.left = x + 'px';
+            document.getElementById('btnNo').style.top = x + 'px';
+
+
+        }
+    </script>
+</body>
+
+</html>

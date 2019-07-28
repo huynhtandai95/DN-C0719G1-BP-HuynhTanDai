@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let username = prompt('Nhập tên người dùng');
+        if (username == 'Admin') {
+            alert('Ấn OK để tiếp tục');
+        }
+        else if (username == null) {
+            alert('Cancel');
+        }
+        else {
+            alert("i don't know you");
+        };
+
+        let pass = prompt('Nhập password', '');
+        if (pass == 'TheMaster') {
+            alert('Welcome');
+        }
+        else if (pass == null) {
+            alert('Canceled');
+        }
+        else {
+            alert('Wrong Password');
+        };
+    </script>
+</body>
+
+</html>

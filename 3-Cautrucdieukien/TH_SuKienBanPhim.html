@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="docReady()">
+        <img id="nobita" src="https://james.codegym.vn/pluginfile.php/10805/mod_assign/intro/1.png"
+    style="position:absolute;left:0; top:0;" height="300" width="200" />
+<script>
+    function len() {
+        let nobita = document.getElementById("nobita");
+        nobita.style.top = parseInt(nobita.style.top) - 5 +'px';
+    }
+    function xuong() {
+        let nobita = document.getElementById("nobita");
+        nobita.style.top = parseInt(nobita.style.top) + 5 +'px';
+    }
+    function trai() {
+        let nobita = document.getElementById("nobita");
+        nobita.style.left = parseInt(nobita.style.left) - 5 +'px';
+    }
+    function phai() {
+        let nobita = document.getElementById("nobita");
+        nobita.style.left = parseInt(nobita.style.left) + 5  +'px';
+
+    }
+    function moveSelection(event) {
+        switch (event.keyCode) {
+            case 37:
+                trai();
+                break;
+            case 39:
+                phai();
+                break;
+            case 38:
+                len();
+                break;
+            case 40:
+                xuong();
+                break;
+        }
+    }
+    //
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+</body>
+
+</html>

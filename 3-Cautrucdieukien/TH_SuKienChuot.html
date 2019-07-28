@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Di chuyển bóng</title>
+</head>
+
+<body>
+    <img id='ball' src="https://images-na.ssl-images-amazon.com/images/I/61A5lkj1eXL._SX425_.jpg" alt=""
+        style="position: relative; top: 0px; left: 0px" width="300" height="300">
+        <p>Nhấn nút bên dưới để di chuyển hình ảnh sang phải</p>
+        <br>
+    <button onclick="diChuyen()">Click me</button>
+    <script>
+        function diChuyen() {
+            let ball = document.getElementById('ball');
+            ball.style.left = parseInt(ball.style.left) + 10 + 'px';
+            
+        }     
+    </script>
+</body>
+
+</html>
