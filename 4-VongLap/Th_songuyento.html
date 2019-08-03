@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 6 - Hiển thị số nguyên tố</title>
+</head>
+
+<body>
+    <script>
+        function checkPrimeNumber(myNumber) {
+            let totalPrimeNumber = 0;
+            if (myNumber <= 1) {
+                return false;
+            } else {
+                for (let i = 1; i <= myNumber; i++) {
+                    if (myNumber % i == 0) {
+                        totalPrimeNumber++;
+                    }
+                }
+            }
+            if (totalPrimeNumber > 2) {
+                return false;
+            }
+            return true;
+        }
+
+        function printPrimeNumber(countPrimeNumber) {
+            let count = 1;
+            let check = 1;
+            let result = '';
+            while(count <= countPrimeNumber) {
+                if(checkPrimeNumber(check)) {
+                    count++;
+                    result += check + " ";
+                    check++;
+                    
+                } else {
+                    check++;
+                }
+            }
+            return result;
+        }
+        
+        
+
+        let myNumber = parseInt(prompt("Nhập số n"));
+        document.write(printPrimeNumber(myNumber));
+    </script>
+</body>
+
+</html>

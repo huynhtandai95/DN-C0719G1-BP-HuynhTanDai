@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Tính thuế thu nhập cá nhân</legend>
+         <p>Thu nhập (Triệu đồng)</p>
+        <input id='thunhap' type="number">
+        <button onclick="result()">Tính thuế</button>
+        <p id='show'></p>
+    </fieldset>
+    <script>
+          function result() {
+                let show = document.getElementById('show');
+                let thunhap = parseInt(document.getElementById('thunhap').value)  ;
+                if (thunhap <=5) {
+                 show.innerText = thunhap*0.05 + ' Triệu đồng';
+                }
+                if (5 < thunhap <=10) {
+                    show.innerText = (thunhap*0.1 - 0.25) + ' Triệu đồng';
+                }
+               
+                if (10 < thunhap <=18) {
+                    show.innerText = (thunhap*0.15 - 0.75) + ' Triệu đồng';
+                }
+                
+                if (18 < thunhap <=32) {
+                    show.innerText = (thunhap*0.2 - 1.65) + ' Triệu đồng';
+                }
+                
+                if (32 < thunhap <=52) {
+                    show.innerText = (thunhap*0.25 - 3.25) + ' Triệu đồng';
+                }
+                
+                if (52 < thunhap <=80) {
+                    show.innerText = (thunhap*0.3 - 5.85) + ' Triệu đồng';
+                }
+                
+                else {
+                    show.innerText = (thunhap*0.35 - 9.85) + ' Triệu đồng';
+                }
+          }
+         </script>
+</body>
+
+</html>

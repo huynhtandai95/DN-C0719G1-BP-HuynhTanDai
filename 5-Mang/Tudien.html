@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Từ Điển Anh- Việt</title>
+</head>
+
+<body>
+
+    <input id='input' type="text">
+    <button onclick="search()">Tìm kiếm</button>
+    <div id='show'></div>
+
+</body>
+
+<script>
+    let english = ['Hello', 'Bye', 'good'];
+    let vietnam = ['Xin Chào', 'Tạm Biệt', 'Tốt'];
+    let show = document.getElementById('show');
+
+    function search() {
+        let input = document.getElementById('input').value;
+
+        for (i = 0; i < english.length; i++) {
+            if (input == english[i]) {
+                show.innerHTML = vietnam[i];
+                break;
+            }else{
+                show.innerHTML = 'Khong tim thay'
+            }
+        }
+
+    }
+
+</script>
+
+</html>

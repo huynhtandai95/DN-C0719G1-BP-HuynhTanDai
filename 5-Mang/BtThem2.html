@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = [100, 12, 14, 4, 26, 3, 99, 2,];
+        let max = 0
+        let index = 0
+        let sum = 0
+        for (i = 0; i < num.length; i++) {
+            sum += num[i]
+            if (num[i] > max) {
+                max = num[i];
+                index = i
+            }
+        }
+        document.write('Số lớn nhất là: ' + max + ' ở vị trí ' + index)
+        document.write('<br/>')
+        document.write('Giá trị trung bình là: ' + sum / num.length)
+    </script>
+</body>
+
+</html>

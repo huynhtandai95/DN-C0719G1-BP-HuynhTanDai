@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Tính giá điện</legend>
+        <p>Nhập số kWh sử dụng </p>
+        <input id='nhapKwh' type="number">
+        <button type="button" onclick="result()">Tính tiền điện</button>
+        <p id='show'></p>
+    </fieldset>
+    <script>
+        function result() {
+            let show = document.getElementById('show');
+            let kwh = parseInt(document.getElementById('nhapKwh').value);
+            let tren50 = (50 * 1678) + ((kwh - 50) * 1734);
+            let tren100 = (50 * 1678 + 50 * 1734) + (kwh - 100) * 2014;
+            
+
+            if (kwh <= 50) {
+                show.innerText = 'Tiền điện ' + (kwh * 1678) + ' VND';
+            }
+            else if (kwh <= 100) {
+                show.innerText = 'Tiền điện ' + tren50 + ' VND';
+            }
+            else if (kwh < 200) {
+                show.innerText = 'Tiền điện ' + tren100 + 'VND';
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

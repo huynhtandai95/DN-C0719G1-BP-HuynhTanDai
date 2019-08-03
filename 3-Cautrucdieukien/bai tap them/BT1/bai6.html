@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Tính hoa hồng </legend>
+        <p>Nhập doanh số</p>
+            <input id="doanhso" type="number">
+            <br>
+            <button onclick="result()">Tính hoa hồng</button>
+            <br>
+            <p id='ketqua'></p>
+    </fieldset>
+<script>
+ function result() {
+     let doanhso =parseFloat(document.getElementById("doanhso").value)  ;
+     if (doanhso <= 1000000) {
+       document.getElementById('ketqua').innerHTML   = 'Hoa hồng là: ' + doanhso*0.01 + ' VND' ;
+     }
+     else if (doanhso <= 10000000) {
+       document.getElementById('ketqua').innerHTML   = 'Hoa hồng là: ' + doanhso*0.02 + ' VND';
+     }
+     else  {
+       document.getElementById('ketqua').innerHTML   = 'Hoa hồng là: ' + doanhso*0.03 + ' VND' ;
+     }
+ }
+ 
+</script>
+    
+</body>
+</html>
