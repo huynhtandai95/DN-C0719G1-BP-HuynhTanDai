@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tính độ F và độ K</title>
+</head>
+<body>
+    <h1>Tính độ F và độ K</h1>
+    <input type="number" id='input'>
+    <button onclick="result()">Tính</button>
+    <p id='show'></p>
+    <script>
+        let Temperature = function (celsius) {
+            this.celsius = celsius; 
+
+           this.getFahrenheit = function () {
+               return 1.8*celsius + 32 ;
+           }
+           this.getKenvin = function () {
+               return celsius + 273.15 ;
+           }
+
+        }
+        function result() {
+            let input = new Temperature(document.getElementById('input').value);
+        document.getElementById('show').innerHTML = 'Độ F là: ' + input.getFahrenheit() +'<br/>' + 'Độ K là: ' + input.getKenvin();
+        }
+        
+    </script>
+</body>
+</html>

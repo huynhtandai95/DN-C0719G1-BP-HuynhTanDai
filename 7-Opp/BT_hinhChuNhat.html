@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<p id='show'></p>    
+
+<canvas id="myCanvas" width="1300" height="700" style="border:1px solid #d82626;"></canvas>
+    <script>
+        let Rectangle = function(dai, rong) {
+            this.dai = dai;
+            this.rong = rong;
+
+
+            this.dienTich = function () {
+                return dai*rong
+            }
+            this.chuVi = function () {
+                return (dai+rong)*2
+            }
+            this.veHinhTron = function() {
+                let ctx= document.getElementById('myCanvas').getContext('2d');
+                ctx.rect(50,50,this.dai,this.rong);
+                ctx.stroke();
+               
+            }
+        }
+        let rectangle = new Rectangle(200, 150);
+        let tinhDienTich = rectangle.dienTich();
+        let tinhChuVi = rectangle.chuVi();
+        rectangle.veHinhTron();
+        document.getElementById('show').innerHTML = 'Diện tích hình chữ nhật là: ' + tinhDienTich + '<br/>' +
+         'Chu vi hình chữ nhật là: ' + tinhChuVi;
+    </script>
+</body>
+
+</html>

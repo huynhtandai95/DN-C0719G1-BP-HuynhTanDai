@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Chuyển feet sang Met</legend>
+        <input type="number" id=inputFoot placeholder="Nhập feet "
+        oninput="toMetter(this.value)">
+        <p id='showMetter'></p>
+    </fieldset>
+  <br/>
+    <fieldset>
+            <legend>Chuyển Met sang Feet</legend>
+            <input type="number" id=inputMetter placeholder="Nhập mét "
+            oninput="toFoot(this.value)">
+            <p id='showFoot'></p>
+        </fieldset>
+  
+  
+</body>
+<script>
+        function toMetter(foot) {
+             foot = parseFloat(foot)
+            document.getElementById('showMetter').innerHTML = 0.305 * foot + ' Met' ;
+        }
+        function toFoot(met) {
+             met = parseFloat(met)
+            document.getElementById('showFoot').innerHTML = 3.279  * met+ ' Foot                     ' ;
+        }
+    </script>
+</html>

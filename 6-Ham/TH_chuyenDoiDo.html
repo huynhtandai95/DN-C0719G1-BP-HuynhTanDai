@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển đổi độ F sang độ C</title>
+</head>
+<body>
+    <p>Nhập độ F</p>
+    <input id="inputF" type="number"   placeholder="Nhập độ F"
+    oninput="doiNhietDo(this.value)"
+    >
+    <p id='show'></p>
+
+</body>
+<script>
+    function doiNhietDo(num) {
+         num = parseFloat(num);
+        document.getElementById('show').innerHTML = (num-32)/18 + ' Độ C ';
+    }
+</script>
+</html>
