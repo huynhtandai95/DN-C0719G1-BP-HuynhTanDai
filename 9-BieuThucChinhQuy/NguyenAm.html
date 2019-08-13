@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính số nguyên âm , phụ âm</h1>
+    <input id='input' type="text" placeholder="Nhập chuỗi">
+    <button onclick="result()">Check</button>
+    <p id='show1'></p>
+    <p id='show2'></p>
+    <script>
+
+        function result() {
+            let input = document.getElementById('input').value;
+            let nguyenAm = /[aeoiu]/ig;
+            let phuAm = /[bcdfghjklmnpqrstvwxyz]/ig;
+            
+            let kqNguyenAm = input.match(nguyenAm) ;
+            let kqPhuAm = input.match(phuAm) ;
+           console.log(kqNguyenAm)
+            document.getElementById('show1').innerHTML = 'các nguyên âm là: ' + kqNguyenAm + ' . Tổng số : ' + kqNguyenAm.length ;
+            document.getElementById('show2').innerHTML = 'các phụ âm là: ' + kqPhuAm + ' . Tổng số : ' + kqPhuAm.length;
+        }
+        
+    </script>
+
+</body>
+
+</html>

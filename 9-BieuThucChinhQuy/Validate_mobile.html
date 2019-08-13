@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validate số điện thoại</title>
+</head>
+
+<body>
+    <h1>Validate số điện thoại</h1>
+    <input id='input' placeholder="Nhập số điện thoại">
+    <button onclick="result()">Kiểm tra</button>
+    <script>
+        function result() {
+            let input = document.getElementById('input').value;
+            let patt = /^\d{2}[-]?[0]\d{9}$/;
+            if (patt.test(input) == true) {
+                alert('Số điện thoại Đúng định dạng !');
+            }
+            else {
+                alert('Sai định dạng! Vui lòng nhập lại');
+            }
+        }
+    </script>
+</body>
+
+</html>

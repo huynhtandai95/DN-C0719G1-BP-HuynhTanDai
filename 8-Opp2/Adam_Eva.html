@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Apple = function () {
+            this.weight = 10;
+
+            this.getWeight = function () {
+                return this.weight
+            }
+            this.decrease = function () {
+                this.weight--
+            }
+        }
+
+        let Human = function (name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+
+            this.eatApple = function () {
+                this.weight++;
+            }
+        }
+
+        let apple = new Apple();
+        let adam = new Human('adam', 'male', 50);
+        console.log('Khối Lượng Táo ban đầu là: ' + apple.weight)
+        for (i = 0; i < 5; i++) {
+            apple.decrease()
+            adam.eatApple()
+        }
+        console.log('Khối Lượng Táo sau khi ăn: ' + apple.weight)
+        console.log('Khối lượng người sau khi ăn: ' + adam.weight)
+    </script>
+</body>
+
+</html>

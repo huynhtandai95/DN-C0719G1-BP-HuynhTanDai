@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm tra Mã quốc gia nước Mỹ</title>
+</head>
+
+<body>
+    <h1>Kiểm tra Mã quốc gia nước Mỹ</h1>
+    <input id='input' type="text" placeholder="Nhập thông tin">
+    <button onclick="result()">Check</button>
+    <script>
+        function result() {
+            let input = document.getElementById('input').value;
+            let regexp = /^[0-9]{5}[\s]?\-?[\s]?([0-9]{4})?$/;
+         
+            if(regexp.test(input) == true) {
+                alert('Mã quốc gia nước Mỹ');
+            }
+            else {
+                alert('Không phải mã quốc gia nước Mỹ');
+            }
+        }
+    </script>
+</body>
+
+</html>

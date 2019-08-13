@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Kiểm Tra có phải là số nguyên tố không?</h1>
+    <p>Nhập số cần kiểm tra</p>
+    <input id="numberCheck" type="number">
+    <button onclick="result()">Check</button>
+    <p id="ketQua"></p>
+    <script>
+        let ketQua = document.getElementById('ketQua');
+        function result() {
+            if (check()) {
+                ketQua.innerHTML = 'Đây là số nguyên tố';
+            } else {
+                ketQua.innerHTML = 'Đây không phải là số nguyên tố'
+            }
+        }
+
+        function check() {
+            let numberCheck = document.getElementById('numberCheck').value;
+            let uocCuanumberCheck = 0;
+            if (numberCheck <= 1) {
+                return false;
+            }
+            if (numberCheck == 2) {
+                return true;
+            }
+            for (i = 2; i < numberCheck; i++) {
+                if (numberCheck % i == 0) {
+                    uocCuanumberCheck++;
+                }
+            }
+            if (uocCuanumberCheck == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+
+    </script>
+</body>

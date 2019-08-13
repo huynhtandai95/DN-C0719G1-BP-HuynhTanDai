@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm tra ký tự đầu tiên của chuỗi có phải là chữ hoa không.</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt('Nhập');       
+        let patt = /^[A-Z]/;
+       
+        if (patt.test(input)==true) {
+             alert('ký tự đầu tiên  là chữ hoa');
+        }
+        else {
+             alert('ký tự đầu tiên Không Phải là chữ hoa');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validate account</title>
+</head>
+<body>
+    <h1>Validate account</h1>
+    <input id='input' type="text" placeholder="Nhập tên tài khoản">
+    <button onclick="result()">Check</button>
+    <script>
+    function result(){
+        let input = document.getElementById('input').value;
+        let patt = /^[_a-z0-9]{6,}$/ ;
+        if (patt.test(input)) {
+            alert('Tài khoản hợp lệ');
+        }
+        else {
+            alert('Tài khoản không hợp lệ');
+        }
+    }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validate tên của lớp học</title>
+</head>
+
+<body>
+    <h1>Validate tên của lớp học</h1>
+    <input id="input" type="text" placeholder="Nhập tên lớp học ">
+    <button onclick="check()">Kiểm Tra</button>
+    <script>
+        function check() {
+            let input = document.getElementById('input').value;
+            let patt = /^[CAP]\d{4}[GHIKLM]$/ ;
+            if (patt.test(input) == true) {
+                alert('Tên lớp hợp lệ')
+            }
+            else {
+                alert('Tên lớp không hợp lệ') 
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tìm giá trị lớn nhất</title>
+</head>
+
+<body>
+    <script>
+        function findMax(arr) {
+            let max = arr[0];
+            for (i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+            }
+            return max;
+        }
+
+        var nums = [];
+        for (var i = 0; i < 100; ++i) {
+            nums[i] = Math.floor(Math.random() * 101);
+        }
+
+        document.write(nums)
+        
+        var maxValue = findMax(nums);        
+        document.write("<br/>");
+        document.write("The maximum value is: " + maxValue);
+    </script>
+</body>
+
+</html>
