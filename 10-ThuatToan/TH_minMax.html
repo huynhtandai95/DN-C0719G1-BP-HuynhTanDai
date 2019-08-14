@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tìm giá trị nhỏ nhất</title>
+</head>
+
+<body>
+    <script>
+        let nums = [];
+        for (i = 0; i < 100; i++) {
+            if (i % 10 == 0) {
+                document.write('</br>')
+            }
+            nums[i] = Math.floor(Math.random() * 101);
+            document.write(nums[i] + ' ');
+        }
+
+
+        function findMin(nums) {
+            let min = nums[0];
+            for (i = 1; i < nums.length; i++) {
+                if (nums[i] < min) {
+                    min = nums[i]
+                }
+            }
+            return min;
+        }
+
+        function findMax(nums) {
+            let max = nums[0];
+            for (i = 0; i < nums.length; i++) {
+                if (nums[i] > max) {
+                    max = nums[i];
+                }
+            }
+            return max;
+        }
+
+        
+        let maxValue = findMax(nums);
+        let minValue = findMin(nums);
+        document.write("<br/>");
+        document.write("Giá trị nhỏ nhất là: " + minValue);
+        document.write("<br/>");
+        document.write("Giá trị lớn nhất là: " + maxValue);
+    </script>
+</body>
+
+</html>
