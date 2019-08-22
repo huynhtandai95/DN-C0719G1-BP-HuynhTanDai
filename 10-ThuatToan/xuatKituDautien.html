@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id='input' oninput="check()">
+    <div id='show'></div>
+    <script>
+        // let a = ['chuoi', 'cam', 'oi', 'quyt'];
+
+        // let b = [];
+        // for (i = 0; i < a.length; i++) {
+        //     if ((a[i].charAt(0)) == 'c') {
+        //         b.push(a[i])
+        //     }
+
+        // }
+
+        // document.write('các kí tự bắt đầu bằng chữ c là: ' + b)
+
+        function check() {
+            let a = ['chuoi', 'cam', 'oi', 'quyt'];
+            let input = document.getElementById('input').value;
+            let b = [];
+            for (i = 0; i < a.length; i++) {
+                if (a[i].slice(0,input.length) == input) {
+                    b.push(a[i])
+                }
+            }
+            document.getElementById('show').innerHTML = 'các kí tự bắt đầu bằng chữ ' + input + ' là: ' +b;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

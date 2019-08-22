@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let NhanVien = function (tenNhanVien, ngayLamViec, luongCoBan) {
+            this.tenNhanVien = tenNhanVien;
+            this.ngayLamViec = ngayLamViec;
+            this.luongCoBan = luongCoBan;
+
+            this.tinhluong = function () {
+                return this.ngayLamViec * this.luongCoBan;
+            }
+        }
+        let nhanvien = new NhanVien('Nguyễn Văn A', 20, 200000);
+        document.write(nhanvien.tenNhanVien + ' có lương là: ' + nhanvien.tinhluong())    
+    </script>
+</body>
+
+</html>
